@@ -1,0 +1,11 @@
+DEEPIFYS ADMIN PANEL — DÜZELTİLMİŞ
+
+1. Netlify > Project configuration > Environment variables
+2. Key: ADMIN_KEY
+3. Value: kendi güçlü admin anahtarın
+4. Different value for each deploy context: açmak zorunda değilsin.
+5. Save variable.
+6. Yeni deploy oluştur.
+7. /admin adresini aç ve aynı admin anahtarını gir.
+
+Not: ADMIN_KEY değerini site dosyasına yazma ve paylaşma.
