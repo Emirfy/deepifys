@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEEPIFYS Admin</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#07090d;color:#eee;font-family:Arial,sans-serif}.wrap{max-width:1100px;margin:auto;padding:30px 18px}
+h1{font:500 38px Georgia;color:#f0c982}.sub{color:#83909a;font-size:12px;margin-bottom:24px}.gate{max-width:430px;margin:12vh auto}.card{background:#10151c;border:1px solid #28313a;border-radius:16px;padding:20px;margin-bottom:18px}.field{width:100%;padding:12px;margin:6px 0;border:1px solid #303b45;border-radius:8px;background:#0a0e13;color:#fff}.btn{padding:11px 15px;border:0;border-radius:8px;background:#e9c27e;color:#111;font-weight:700;cursor:pointer}.danger{background:#9d4856;color:white}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat b{font-size:28px;color:#f0c982}.stat small{display:block;color:#78858e;margin-top:5px}.tabs{display:flex;gap:8px;margin:18px 0}.tab{background:#111820;color:#9ca8b0;border:1px solid #2b3640;padding:9px 13px;border-radius:8px;cursor:pointer}.tab.active{color:#f0c982;border-color:#b18b4e}.row{display:flex;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid #202930;align-items:center}.meta b{font-size:13px}.meta small{display:block;color:#78858e;margin-top:4px}.msg{min-height:18px;color:#e99eaa;font-size:11px;margin-top:8px}.hidden{display:none}@media(max-width:650px){.stats{grid-template-columns:1fr}.row{align-items:flex-start}.row .btn{padding:8px;font-size:10px}}
+</style></head><body>
+<div class="wrap">
+<div id="gate" class="gate"><div class="card"><h1>DEEPIFYS Admin</h1><div class="sub">Yönetim paneli — sadece site yöneticisi için.</div>
+<input id="key" class="field" type="password" placeholder="Admin anahtarı">
+<button id="login" class="btn">PANELE GİR</button><div id="msg" class="msg"></div></div></div>
+<div id="app" class="hidden"><h1>DEEPIFYS Admin</h1><div class="sub">Kullanıcılar, sosyal gönderiler ve yorumlar.</div>
+<div class="stats"><div class="card stat"><b id="uCount">0</b><small>KULLANICI</small></div><div class="card stat"><b id="pCount">0</b><small>GÖNDERİ</small></div><div class="card stat"><b id="rCount">0</b><small>YORUM</small></div></div>
+<div class="tabs"><button class="tab active" data-t="users">KULLANICILAR</button><button class="tab" data-t="posts">GÖNDERİLER</button><button class="tab" data-t="reviews">YORUMLAR</button></div>
+<div id="list" class="card"></div></div></div>
+<script>
+let key="",data={};
+const $=x=>document.getElementById(x), esc=s=>String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+async function api(body){const r=await fetch("/api/admin",{method:"POST",headers:{"content-type":"application/json","x-admin-key":key},body:JSON.stringify(body)});const d=await r.json();if(!r.ok)throw Error(d.error||"Hata");return d}
+$("login").onclick=async()=>{try{key=$("key").value;data=await api({action:"overview"});$("gate").classList.add("hidden");$("app").classList.remove("hidden");render("users")}catch(e){$("msg").textContent="Admin anahtarı hatalı veya panel yapılandırılmamış."}}
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.t)});
+function render(t){$("uCount").textContent=data.users.length;$("pCount").textContent=data.posts.length;$("rCount").textContent=data.reviews.length;
+if(t==="users")$("list").innerHTML=data.users.map(u=>`<div class="row"><div class="meta"><b>${esc(u.displayName)}</b><small>@${esc(u.username)} · ${new Date(u.createdAt).toLocaleString("tr-TR")}</small></div><button class="btn danger" onclick="delUser('${esc(u.username)}')">SİL</button></div>`).join("")||"Kullanıcı yok.";
+if(t==="posts")$("list").innerHTML=data.posts.map(p=>`<div class="row"><div class="meta"><b>@${esc(p.username)}</b><small>${esc(p.text).slice(0,180)} · ❤️ ${p.likes?.length||0} · 💬 ${p.comments?.length||0}</small></div><button class="btn danger" onclick="delPost('${p.id}')">SİL</button></div>`).join("")||"Gönderi yok.";
+if(t==="reviews")$("list").innerHTML=data.reviews.map(r=>`<div class="row"><div class="meta"><b>${esc(r.displayName)}</b><small>${esc(r.text).slice(0,180)}</small></div><button class="btn danger" onclick="delReview('${r.id}')">SİL</button></div>`).join("")||"Yorum yok.";
+}
+async function reload(){data=await api({action:"overview"});const active=document.querySelector(".tab.active");render(active?.dataset.t||"users")}
+async function delUser(u){if(!confirm("@"+u+" hesabını silmek istediğine emin misin?"))return;await api({action:"deleteUser",username:u});reload()}
+async function delPost(id){if(!confirm("Bu gönderi silinsin mi?"))return;await api({action:"deletePost",id});reload()}
+async function delReview(id){if(!confirm("Bu yorum silinsin mi?"))return;await api({action:"deleteReview",id});reload()}
+</script></body></html>

@@ -1,0 +1,7 @@
+{
+  "name":"deepifys-veloraify-cloudflare",
+  "private":true,
+  "version":"2.0.0",
+  "type":"module",
+  "scripts":{"build":"echo Cloudflare Pages build ready"}
+}

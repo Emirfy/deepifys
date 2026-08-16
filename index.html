@@ -1,0 +1,212 @@
+<!doctype html>
+
+<div class="deepifys-ultra-ribbon" aria-hidden="true">
+  <span>MIAMI AFTER DARK</span><i></i><span>VELORA COLLECTION</span><i></i><span>HANDPICKED JEWELRY</span>
+</div>
+<div class="deepifys-orb orb-a" aria-hidden="true"></div>
+<div class="deepifys-orb orb-b" aria-hidden="true"></div>
+<style>
+.deepifys-ultra-ribbon{
+ position:fixed;top:0;left:0;right:0;height:24px;z-index:30;
+ display:flex;align-items:center;justify-content:center;gap:16px;
+ font:600 8px/1.1 Arial,sans-serif;letter-spacing:.28em;
+ color:rgba(255,255,255,.65);background:rgba(4,6,10,.52);
+ border-bottom:1px solid rgba(255,255,255,.06);backdrop-filter:blur(10px);
+}
+.deepifys-ultra-ribbon i{width:3px;height:3px;border-radius:50%;background:#e9bd72;box-shadow:0 0 9px #e9bd72}
+.deepifys-orb{position:fixed;z-index:1;width:260px;height:260px;border-radius:50%;filter:blur(70px);pointer-events:none;opacity:.12}
+.orb-a{right:-100px;top:25%;background:#ff4fa3}.orb-b{left:-120px;bottom:15%;background:#58e7ff}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+ const reveal=document.querySelectorAll('.card,.product,.collection,.feature,.glass,.section-title');
+ if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+   if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';io.unobserve(e.target)}
+  }),{threshold:.08});
+  reveal.forEach(el=>{el.style.opacity='0';el.style.transform='translateY(22px)';el.style.transition+=';opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)';io.observe(el)});
+ }
+});
+</script>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEEPIFYS | VELORA Miami Vintage Jewelry</title>
+<meta name="description" content="DEEPIFYS x VELORA — Miami Beach esintili vintage kolyeler ve altın takılar. Sunset, ocean drive ve Miami afterglow ruhundan ilham alan koleksiyon.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://deepifys.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DEEPIFYS | VELORA Miami Vintage Jewelry">
+<meta property="og:description" content="Miami sunset ruhundan ilham alan vintage takı koleksiyonu.">
+<meta property="og:url" content="https://deepifys.netlify.app/">
+<meta name="theme-color" content="#090d10">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"JewelryStore","name":"DEEPIFYS","alternateName":"VELORA","url":"https://deepifys.netlify.app/","description":"Miami Beach esintili vintage jewelry koleksiyonu."}
+</script>
+<link rel="icon" type="image/png" href="velora-miami-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#090d10;color:#f7f0e6;font-family:Manrope,Arial,sans-serif;overflow-x:hidden}
+header{height:76px;position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(5,12,17,.68);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.15)}
+.logo{display:flex;align-items:center;gap:10px;font:500 23px "Bodoni Moda",serif;letter-spacing:6px;color:#fff;text-decoration:none}.logo img{width:38px;height:38px;object-fit:cover;border-radius:50%;border:1px solid #d8a866}nav{display:flex;gap:34px}nav a,header button{font-size:9px;letter-spacing:2px;color:#eee7dd;background:none;border:0;text-decoration:none;cursor:pointer}.bag b{background:#d8a866;color:#17100b;border-radius:50%;padding:3px 7px;margin-left:5px}
+.hero{height:100vh;min-height:760px;position:relative;overflow:hidden}.hero-photo{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(4,12,18,.88),rgba(4,12,18,.28) 55%,rgba(4,12,18,.1)),linear-gradient(0deg,rgba(5,11,15,.9),transparent 55%),url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2400&q=90");background-size:cover;background-position:center}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 45%,rgba(255,112,70,.18),transparent 75%)}
+.palm{position:absolute;z-index:1;bottom:-150px;color:#071014;font-size:390px;line-height:.8;filter:drop-shadow(10px 0 8px rgba(0,0,0,.4));user-select:none}.palm.one{right:-35px;transform:scaleX(-1)}.palm.two{right:250px;bottom:-180px;font-size:280px;opacity:.8}
+.hero-copy{position:absolute;z-index:3;left:8vw;top:31%;max-width:720px}.eyebrow{font-size:9px;letter-spacing:4px;color:#f0bc77}.hero h1{font:400 clamp(68px,9vw,128px)/.82 "Bodoni Moda",serif;letter-spacing:-4px;margin:25px 0}.hero h1 i,h2 i{color:#ffd08b;font-style:normal}.hero-copy p{font-size:15px;line-height:1.8;color:#eee0d3;max-width:500px}.cta{display:inline-block;margin-top:25px;padding:16px 23px;background:#f5ede0;color:#17110d;font-size:9px;letter-spacing:2px;text-decoration:none}.location{position:absolute;z-index:3;right:5vw;bottom:40px;font:25px "Bodoni Moda";text-align:right}.location small{font:8px Manrope;letter-spacing:3px;color:#c5b7a7}
+.ticker{white-space:nowrap;overflow:hidden;border-top:1px solid #283036;border-bottom:1px solid #283036;padding:17px;color:#849092;font-size:9px;letter-spacing:4px}
+.intro{padding:145px 8vw;display:grid;grid-template-columns:1fr 1fr;gap:80px;background:linear-gradient(#0b1115,#11181c)}h2{font:400 76px/1 "Bodoni Moda",serif;letter-spacing:-3px;margin:15px 0}.intro p{align-self:end;color:#98a0a0;max-width:450px;line-height:2;font-size:14px}
+.shop{padding:140px 7vw;background:#101619}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:55px}.section-head small{font-size:8px;letter-spacing:3px;color:#7c8789}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#171d1f}.product-photo{height:470px;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#354a50,#101618)}.product-photo:before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:#d28d54;filter:blur(65px);opacity:.3}.jewel{position:relative;width:155px;height:155px;border:6px double #c99b58;border-radius:50%;box-shadow:0 30px 70px #000}.jewel.square{width:115px;height:115px;border-radius:15px;transform:rotate(45deg)}.jewel.pearl{width:120px;height:120px;background:radial-gradient(circle at 30% 25%,#fff5df,#b98f67 50%,#432b21);border:3px solid #d6ad6f}.card-info{padding:22px}.card-info h3{font:400 27px "Bodoni Moda";margin:0 0 8px}.meta{display:flex;justify-content:space-between;color:#8c9696;font-size:10px}.price{color:#dfb574}.add{width:100%;margin-top:18px;padding:12px;background:transparent;border:1px solid #3c484a;color:#c7beb3;letter-spacing:2px;font-size:9px;cursor:pointer}.add:hover{background:#f5ede0;color:#17110d}
+.story{display:grid;grid-template-columns:1.1fr .9fr;background:#121a1e}.story-photo{min-height:760px;background-image:linear-gradient(rgba(0,0,0,.08),rgba(4,12,16,.7)),url("https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1800&q=90");background-size:cover;background-position:center}.story-copy{padding:140px 8vw}.story-copy p{color:#9aa3a3;line-height:2;max-width:510px;margin-top:40px}.numbers{display:flex;gap:50px;margin-top:75px}.numbers b{font:35px "Bodoni Moda";color:#dcb073}.numbers small{display:block;font:8px Manrope;color:#778182;letter-spacing:2px;margin-top:5px}
+.journal{padding:140px 7vw}.articles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #2b3437;margin-top:55px}.articles article{padding:35px 25px 20px 0;border-right:1px solid #2b3437}.articles article+article{padding-left:25px}.articles small{font-size:8px;letter-spacing:3px;color:#a18766}.articles h3{font:400 28px "Bodoni Moda";margin:30px 0 10px}.articles p{color:#818c8d;font-size:11px;line-height:1.8}
+footer{padding:30px 7vw;border-top:1px solid #2b3437;display:flex;justify-content:space-between;color:#788284;font-size:8px;letter-spacing:2px}footer strong{font:18px "Bodoni Moda";color:#d5aa6d}
+.drawer{position:fixed;z-index:40;right:-430px;top:0;width:430px;height:100vh;background:#12191c;padding:30px;transition:.3s;box-shadow:-25px 0 80px #000}.drawer.open{right:0}.drawer-close{float:right;background:none;border:0;color:#aaa;font-size:28px;cursor:pointer}.drawer h2{font-size:40px}.item{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid #2b3437;font-size:11px}.total{display:flex;justify-content:space-between;margin-top:28px;font-size:10px}.checkout{width:100%;margin-top:20px;padding:15px;background:#f5ede0;border:0;color:#17110d;letter-spacing:2px;cursor:pointer}
+@media(max-width:850px){nav{display:none}.hero-copy{left:7vw;top:26%}.hero h1{font-size:72px}.palm.two{right:30px}.location{display:none}.intro,.story,.products,.articles{grid-template-columns:1fr}.intro{padding:100px 7vw}.shop,.journal{padding:100px 7vw}.section-head{display:block}.section-head>small{display:block;margin-top:20px}.story-photo{min-height:500px}.story-copy{padding:100px 7vw}footer{display:block;line-height:3}.drawer{width:100%}}
+</style>
+
+<style>
+/* DEEPIFYS ULTRA MIAMI LUXURY LAYER */
+:root{
+  --gold:#e9bd72; --pink:#ff4fa3; --cyan:#58e7ff; --glass:rgba(12,15,22,.48);
+}
+body{overflow-x:hidden;background:#05070b!important}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;z-index:2;
+ background:
+ radial-gradient(circle at 78% 18%,rgba(255,79,163,.12),transparent 28%),
+ radial-gradient(circle at 20% 72%,rgba(88,231,255,.09),transparent 30%);
+ mix-blend-mode:screen;
+}
+body:after{
+ content:"";position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.055;
+ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+.hero,.section,.footer{position:relative;z-index:4}
+.logo{transition:transform .35s ease,filter .35s ease}
+.logo:hover{transform:translateY(-2px);filter:drop-shadow(0 0 12px rgba(233,189,114,.35))}
+nav a{transition:color .25s, text-shadow .25s}
+nav a:hover{color:var(--gold)!important;text-shadow:0 0 16px rgba(233,189,114,.35)}
+.btn,.button,a[class*="btn"]{transition:transform .3s,box-shadow .3s,background .3s}
+.btn:hover,.button:hover,a[class*="btn"]:hover{transform:translateY(-3px);box-shadow:0 14px 38px rgba(0,0,0,.32),0 0 25px rgba(233,189,114,.12)}
+.card,.product,.collection,.feature,.glass{
+ background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.018))!important;
+ border:1px solid rgba(255,255,255,.11)!important;
+ box-shadow:0 24px 70px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.08);
+ backdrop-filter:blur(14px);
+ transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .45s;
+}
+.card:hover,.product:hover,.collection:hover,.feature:hover,.glass:hover{
+ transform:translateY(-8px) scale(1.012);
+ border-color:rgba(233,189,114,.35)!important;
+ box-shadow:0 30px 80px rgba(0,0,0,.4),0 0 38px rgba(233,189,114,.07);
+}
+img{transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s}
+.card:hover img,.product:hover img,.collection:hover img{transform:scale(1.045);filter:saturate(1.08) contrast(1.03)}
+.eyebrow{letter-spacing:.32em!important;color:var(--gold)!important}
+h1,h2,h3{letter-spacing:-.025em}
+h1{ text-shadow:0 0 45px rgba(255,79,163,.12)}
+.section-title:after{
+ content:"";display:block;width:64px;height:1px;margin:18px auto 0;
+ background:linear-gradient(90deg,transparent,var(--gold),var(--pink),transparent);
+ box-shadow:0 0 14px rgba(233,189,114,.35);
+}
+#musicBtn{transition:transform .3s,box-shadow .3s}
+#musicBtn:hover{transform:scale(1.08) rotate(4deg);box-shadow:0 0 28px rgba(255,79,163,.22)}
+@media(max-width:700px){
+ body:before{background:radial-gradient(circle at 50% 20%,rgba(255,79,163,.12),transparent 35%)}
+}
+</style>
+
+<style>
+.footer-contact{margin-top:10px;font-size:12px;letter-spacing:.04em;color:rgba(255,255,255,.68)}
+</style>
+</head>
+<body>
+<header><a class="logo" href="#"><img src="velora-miami-logo.png" alt="VELORA Miami"><span>VELORA</span></a><nav><a href="#shop">SHOP</a><a href="#story">STORY</a><a href="#journal">JOURNAL</a></nav><button id="bag">BAG <b>0</b></button></header>
+<section class="hero"><div class="hero-photo"></div><div class="palm one">🌴</div><div class="palm two">🌴</div><div class="hero-copy"><div class="eyebrow">MIAMI BEACH · FLORIDA</div><h1>Sunset<br><i>looks good on you.</i></h1><p>Vintage-inspired jewelry born between the ocean, palm trees and the last light of Miami.</p><a class="cta" href="#shop">SHOP THE COLLECTION ↗</a></div><div class="location">25°46′N<br><small>MIAMI BEACH</small></div></section>
+<div class="ticker">PALM TREES · GOLDEN LIGHT · OCEAN DRIVE · VINTAGE SOUL · PALM TREES · GOLDEN LIGHT · OCEAN DRIVE · VINTAGE SOUL ·</div>
+<section class="intro"><div><div class="eyebrow">DEEPIFYS / VELORA / AFTERGLOW</div><h2>Gold, salt air<br>& <i>late nights.</i></h2></div><p>We collect the feeling of a Miami evening and turn it into pieces you can keep. Warm metal, ocean light and the glamour of another decade.</p></section>
+<section id="shop" class="shop"><div class="section-head"><div><div class="eyebrow">01 — THE COLLECTION</div><h2>Golden Hour</h2></div><small>LIMITED / HAND-FINISHED</small></div><div id="products" class="products"></div></section>
+<section id="story" class="story"><div class="story-photo"></div><div class="story-copy"><div class="eyebrow">THE VELORA WORLD</div><h2>Some nights<br><i>stay with you.</i></h2><p>Warm concrete after sunset. Wet pavement reflecting neon. A palm moving in the ocean breeze. The glow of old gold against skin. VELORA is designed around those moments.</p><div class="numbers"><b>1987<small>THE ERA</small></b><b>03<small>CORE PIECES</small></b><b>∞<small>SUMMER NIGHTS</small></b></div></div></section>
+<section id="journal" class="journal"><div class="eyebrow">THE JOURNAL</div><h2>Miami, <i>after six.</i></h2><div class="articles"><article><small>01 / PLACE</small><h3>Ocean Drive at golden hour</h3><p>The light, the palms, the chrome and the sea.</p></article><article><small>02 / STYLE</small><h3>How to layer vintage gold</h3><p>A quieter way to make an entrance.</p></article><article><small>03 / CARE</small><h3>Let it become yours</h3><p>How natural patina makes a piece personal.</p></article></div></section>
+<footer><strong>VELORA</strong><span>MIAMI BEACH / VINTAGE JEWELRY</span><span>DEEPIFYS / © 2026</span><div class="footer-contact">İletişim: emirgoklayaas@gmail.com</div>
+</footer>
+<aside class="drawer" id="drawer"><button class="drawer-close" id="close">×</button><h2>Bag</h2><div id="items"></div><div class="total">TOTAL <b id="total">₺0</b></div><button class="checkout">CHECKOUT</button></aside>
+<script>
+const products=[["Sunset Medallion",1490,"Gold vermeil / 45 cm",""],["Ocean Drive Signet",1690,"Antique finish / 50 cm","square"],["Palm Pearl",1890,"Pearl / vintage gold","pearl"]];
+let bag=JSON.parse(localStorage.getItem("veloraBag")||"[]");
+document.getElementById("products").innerHTML=products.map((p,i)=>`<article class="card"><div class="product-photo"><div class="jewel ${p[3]}"></div></div><div class="card-info"><h3>${p[0]}</h3><div class="meta"><span>${p[2]}</span><span class="price">₺${p[1].toLocaleString("tr-TR")}</span></div><button class="add" onclick="add(${i})">ADD TO BAG +</button></div></article>`).join("");
+function add(i){bag.push(products[i]);save()} function del(i){bag.splice(i,1);save()}
+function save(){localStorage.setItem("veloraBag",JSON.stringify(bag));render()}
+function render(){document.querySelector("#bag b").textContent=bag.length;document.getElementById("items").innerHTML=bag.length?bag.map((p,i)=>`<div class="item">${p[0]}<span>₺${p[1].toLocaleString("tr-TR")} <button onclick="del(${i})">×</button></span></div>`).join(""):"<p style='color:#788080;font-size:11px'>Your bag is empty.</p>";document.getElementById("total").textContent="₺"+bag.reduce((a,p)=>a+p[1],0).toLocaleString("tr-TR")}
+document.getElementById("bag").onclick=()=>document.getElementById("drawer").classList.add("open");document.getElementById("close").onclick=()=>document.getElementById("drawer").classList.remove("open");document.querySelector(".checkout").onclick=()=>alert("Demo checkout — gerçek ödeme sistemi daha sonra bağlanabilir.");render();
+</script>
+
+<style>
+#musicBtn{position:fixed;z-index:35;left:22px;bottom:22px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(10,16,19,.72);backdrop-filter:blur(12px);color:#f5d09a;cursor:pointer;font-size:18px;box-shadow:0 10px 35px rgba(0,0,0,.35)}
+#musicBtn.playing{box-shadow:0 0 0 5px rgba(245,208,154,.08),0 10px 35px rgba(0,0,0,.45)}
+</style>
+<audio id="siteMusic" src="miami-vice.wav" loop preload="auto"></audio>
+<button id="musicBtn" aria-label="Müziği aç/kapat" title="Müziği aç/kapat">♫</button>
+<script>
+const music=document.getElementById('siteMusic'),musicBtn=document.getElementById('musicBtn');
+function setMusic(on){if(on){music.volume=.28;music.play().then(()=>musicBtn.classList.add('playing')).catch(()=>{});}else{music.pause();musicBtn.classList.remove('playing');}}
+musicBtn.addEventListener('click',()=>setMusic(music.paused));
+window.addEventListener('load',()=>setMusic(true));
+</script>
+
+
+<style>
+#deepifysLive{
+  position:fixed;left:50%;bottom:28px;transform:translateX(-50%);
+  z-index:50;display:flex;align-items:center;gap:10px;
+  padding:11px 18px;border:1px solid rgba(245,208,154,.28);
+  border-radius:999px;background:rgba(8,13,17,.84);
+  backdrop-filter:blur(18px);box-shadow:0 14px 45px rgba(0,0,0,.35);
+  color:rgba(255,255,255,.76);font:600 10px/1.2 Arial,sans-serif;
+  letter-spacing:.13em;white-space:nowrap
+}
+#deepifysLiveDot{width:8px;height:8px;border-radius:50%;background:#42e88b;
+  box-shadow:0 0 13px #42e88b;animation:deepifysPulse 1.7s infinite}
+#deepifysLiveCount{color:#f5d09a;font-size:13px;margin-right:2px}
+@keyframes deepifysPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.42;transform:scale(.72)}}
+@media(max-width:600px){
+ #deepifysLive{bottom:82px;padding:9px 13px;font-size:8px}
+ #deepifysLiveCount{font-size:12px}
+}
+</style>
+<div id="deepifysLive" aria-live="polite" title="Son 45 saniyede aktif ziyaretçiler">
+  <span id="deepifysLiveDot"></span>
+  <span><span id="deepifysLiveCount">—</span> KİŞİ ŞU AN SİTEDE</span>
+</div>
+<script>
+(() => {
+  const endpoint = "/api/presence";
+  let id = localStorage.getItem("deepifys_visitor_id");
+  if (!id) {
+    id = (crypto.randomUUID ? crypto.randomUUID() :
+      "v_" + Math.random().toString(36).slice(2) + Date.now());
+    localStorage.setItem("deepifys_visitor_id", id);
+  }
+  const count = document.getElementById("deepifysLiveCount");
+  async function heartbeat(){
+    try{
+      const r = await fetch(endpoint + "?id=" + encodeURIComponent(id), {cache:"no-store"});
+      if(!r.ok) throw new Error();
+      const data = await r.json();
+      if(typeof data.active === "number") count.textContent = data.active;
+    }catch(e){}
+  }
+  heartbeat();
+  setInterval(heartbeat,15000);
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden) heartbeat()});
+})();
+</script>
+
+
+<a href="/community.html" class="deepifys-community-link" style="position:fixed;right:22px;top:78px;z-index:45;padding:10px 15px;border:1px solid rgba(245,208,154,.32);border-radius:999px;background:rgba(7,11,15,.78);backdrop-filter:blur(14px);color:#f5d09a;text-decoration:none;font:600 10px Arial,sans-serif;letter-spacing:.14em">COMMUNITY ✦</a>
+
+</body></html>
